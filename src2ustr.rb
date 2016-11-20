@@ -1,5 +1,5 @@
 #!/usr/bin/env ruby
-# tools/restocstr.rb
+# src2str.rb
 # This program allows compiling resources into c-powered string
 # You need ruby to run this program
 # Usage:
@@ -38,6 +38,7 @@ arr.each do |i|
   raw << "\\u" + i.upcase
 end
 
+# Modify next lines to make it generate code for other language
 out = <<-CPP
 // This file is basically packed #{ARGV[0]}. 
 const char* #{ARGV[2]} = "#{raw}";
