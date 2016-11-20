@@ -2,6 +2,8 @@
 # tools/restocstr.rb
 # This program allows compiling resources into c-powered string
 # You need ruby to run this program
+# Usage:
+# ./restocstr.rb <infile> <outfile> <varname>
 
 def charToUnicode(char)
   if char.class != ::String
@@ -38,8 +40,6 @@ end
 
 out = <<-CPP
 // This file is basically packed #{ARGV[0]}. 
-// To edit this file, edit that file and run
-// `make pack`
 const char* #{ARGV[2]} = "#{raw}";
 CPP
 
