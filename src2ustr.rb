@@ -3,7 +3,7 @@
 # This program allows compiling resources into c-powered string
 # You need ruby to run this program
 # Usage:
-# ./restocstr.rb <infile> <outfile> <varname>
+# ./src2ustr.rb <infile> <outfile> <varname>
 
 def charToUnicode(char)
   if char.class != ::String
